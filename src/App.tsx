@@ -1,19 +1,29 @@
 import React from 'react';
 
-import { features, pricingCards } from './data/pricingData';
+import { pricingCards, features } from './data/pricingData';
 
-import PricingCard from './components/PricingCard';
+import { Button, Feature, FeaturesList, Price, PricingCard, Title } from './components';
 
 import './styles/global.scss';
 
 const App: React.FC = () => {
-  
   return (
     <div className="App">
       <h1>Pricing Table</h1>
       <div className="pricing-table">
-        {pricingCards.map((card) => (
-          <PricingCard key={card.price} {...card} features={features} />
+        {pricingCards.map((card, index) => (
+          <PricingCard key={index} borderColor={card.borderColor}>
+            <Title>{card.title}</Title>
+            <Price price={card.price} />
+            <FeaturesList>
+              {features.map((feature, featureIndex) => (
+                <Feature key={feature} included={card.includedFeatures[featureIndex]}>
+                  {feature}
+                </Feature>
+              ))}
+            </FeaturesList>
+            <Button>Get Started</Button>
+          </PricingCard>
         ))}
       </div>
     </div>
