@@ -4,6 +4,7 @@ import Feature from './Feature';
 import FeaturesList from './FeaturesList';
 import Price from './Price';
 import Title from './Title';
+import PricingTable from './PricingTable';
 
 export {
 	PricingCard,
@@ -12,4 +13,5 @@ export {
 	FeaturesList,
 	Price,
 	Title,
+	PricingTable,
 };

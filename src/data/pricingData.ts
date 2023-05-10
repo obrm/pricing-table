@@ -1,4 +1,6 @@
-const features = [
+import PricingCardData from '../types/PricingCardData';
+
+const features: string[] = [
 	'Unlimited calls',
 	'Free hosting',
 	'500 MB of storage space',
@@ -6,7 +8,7 @@ const features = [
 	'24/7 support',
 ];
 
-const pricingCards = [
+const pricingCards: PricingCardData[] = [
 	{
 		title: 'Basic',
 		price: 49,
