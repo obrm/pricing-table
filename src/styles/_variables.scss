@@ -1,0 +1,23 @@
+// Variables
+$green: #04DC9C;
+$purple: #9B83FC;
+$pink: #FC75B4;
+$gray: #F3F7F9;
+$dark-blue: #4F6590;
+
+$margin-bottom: 2.5rem;
+
+// Mixins
+@mixin card-border($color) {
+	border: 2px solid $color;
+	h2,
+	.price {
+		color: $color;
+	}
+	button {
+		background-color: $color;
+		&:hover {
+			background-color: darken($color, 10%);
+		}
+	}
+}
