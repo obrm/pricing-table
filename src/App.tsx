@@ -2,12 +2,12 @@ import React from 'react';
 
 import { features, pricingCards } from './data/pricingData';
 
-import PricingCard from './components/PricingCard';
+import { PricingCard } from './components';
 
 import './styles/global.scss';
 
 const App: React.FC = () => {
-  
+
   return (
     <div className="App">
       <h1>Pricing Table</h1>
