@@ -10,7 +10,7 @@ const pricingCards = [
 	{
 		title: 'Basic',
 		price: 49,
-		includedFeatures: [
+		isFeatureIncluded: [
 			true,
 			true,
 			true,
@@ -23,7 +23,7 @@ const pricingCards = [
 	{
 		title: 'Standard',
 		price: 59,
-		includedFeatures: [
+		isFeatureIncluded: [
 			true,
 			true,
 			true,
@@ -36,7 +36,7 @@ const pricingCards = [
 	{
 		title: 'Enterprise',
 		price: 89,
-		includedFeatures: [
+		isFeatureIncluded: [
 			true,
 			true,
 			true,

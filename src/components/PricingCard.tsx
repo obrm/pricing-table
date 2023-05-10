@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { Button, Feature, Price, Title } from '.';
+
 interface PricingCardProps {
   title: string;
   price: number;
   features: string[];
-  includedFeatures: boolean[];
+  isFeatureIncluded: boolean[];
   borderColor: string;
   buttonText: string;
 }
@@ -13,32 +15,20 @@ const PricingCard: React.FC<PricingCardProps> = ({
   title,
   price,
   features,
-  includedFeatures,
+  isFeatureIncluded,
   borderColor,
   buttonText
 }) => {
   return (
     <div className={`card ${borderColor}`}>
-      <h2>{title}</h2>
-      <p className="price">
-        ${price}{' '}
-        <span className="month">
-        / Mo
-      </span>
-      </p>
+      <Title title={title} />
+      <Price price={price} />
       <ul>
         {features.map((feature, index) => (
-          <li key={index}>
-            {includedFeatures[index] ? (
-              <span className="icon-check">&#10003;</span>
-            ) : (
-              <span className="icon-cross">&#10060;</span>
-            )}
-            {feature}
-          </li>
+          <Feature key={feature} included={isFeatureIncluded[index]} feature={feature} />          
         ))}
       </ul>
-      <button className={borderColor}>{buttonText}</button>
+      <Button text={buttonText} />
     </div>
   );
 };
