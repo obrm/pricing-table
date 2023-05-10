@@ -9,7 +9,14 @@ interface PricingCardProps {
   buttonText: string;
 }
 
-const PricingCard: React.FC<PricingCardProps> = ({ title, price, features, includedFeatures, borderColor, buttonText }) => {
+const PricingCard: React.FC<PricingCardProps> = ({
+  title,
+  price,
+  features,
+  includedFeatures,
+  borderColor,
+  buttonText
+}) => {
   return (
     <div className={`card ${borderColor}`}>
       <h2>{title}</h2>

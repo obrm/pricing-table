@@ -12,8 +12,8 @@ const App: React.FC = () => {
     <div className="App">
       <h1>Pricing Table</h1>
       <div className="pricing-table">
-        {pricingCards.map((card, index) => (
-          <PricingCard key={index} {...card} features={features} />
+        {pricingCards.map((card) => (
+          <PricingCard key={card.price} {...card} features={features} />
         ))}
       </div>
     </div>
