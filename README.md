@@ -9,7 +9,7 @@ There are two versions of the app, each with a different implementation of the `
 In the `master` branch, the `PricingCard` component is a regular React component that includes the `Title`, `Price`, a list of `Feature` components and a `Button` components directly inside it. The parent `App` component imports the `PricingCard` component and uses it without passing any children to it.
 
 ### compound-components Branch - Compound Components
-In the `compound-components` branch, the `PricingCard` component follows the compound components design pattern. The component accepts children components, allowing for more flexibility in terms of composition. In this version, the `App` component imports the `PricingTable` component that holds the `PricingCard`, `Title`, `Price`, `FeaturesList`, `Feature` and `Button` components, and uses them as children of the `PricingCard` component.
+In the `compound-components` branch, the `PricingCard` component adheres to the compound components design pattern. By accepting child components, it offers increased flexibility in terms of composition. In this version, the `App` component imports the `PricingTable` component, which contains the `PricingCard`, `Title`, `Price`, `FeaturesList`, `Feature`, and `Button` components. These components are then utilized as children of the `PricingCard` component.
 
 To switch between the two versions, you can check out the corresponding branch in your Git repository.
 
